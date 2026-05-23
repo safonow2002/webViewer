@@ -2,9 +2,10 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #1a1a1a;
     color: #fff;
+    user-select: none;
 }
 
 #ui-container {
@@ -12,14 +13,20 @@ body {
     top: 20px;
     left: 20px;
     z-index: 10;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 h1 {
-    font-size: 18px;
-    margin-top: 0;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00adb5;
 }
 
 #file-input {
@@ -27,20 +34,50 @@ h1 {
 }
 
 .upload-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+    display: block;
+    padding: 12px 20px;
+    background-color: #00adb5;
     color: white;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
 }
 
 .upload-btn:hover {
-    background-color: #0056b3;
+    background-color: #008c95;
+}
+
+.upload-btn:active {
+    transform: scale(0.98);
+}
+
+#hint {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #aaa;
+    max-width: 200px;
+    line-height: 1.4;
 }
 
 #canvas-container {
     width: 100vw;
     height: 100vh;
+}
+
+/* Стилизация панели настроек GUI справа */
+.lil-gui {
+    --background-color: rgba(20, 20, 20, 0.85) !important;
+    --text-color: #eee !important;
+    --title-background-color: #222 !important;
+    --widget-color: #333 !important;
+    --hover-color: #00adb5 !important;
+    --focus-color: #00adb5 !important;
+    font-family: sans-serif !important;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.1) !important;
+    top: 20px !important;
+    right: 20px !important;
 }
