@@ -2,6 +2,9 @@ let scene, camera, renderer, controls, transformControls;
 let currentModel, gui;
 let raycaster, mouse;
 
+
+
+
 // Объект глобальных настроек для меню GUI
 const settings = {
     // Освещение
@@ -18,8 +21,11 @@ const settings = {
     exportModel: function() { saveModel(); }
 };
 
-init();
-animate();
+// Запуск только после того, как весь HTML полностью построился
+window.addEventListener('DOMContentLoaded', () => {
+    init();
+    animate();
+});
 
 function init() {
     const container = document.getElementById('canvas-container');
