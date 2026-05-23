@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D OBJ Viewer</title>
+    <title>Advanced 3D OBJ Viewer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Подключаем Three.js и OBJLoader через CDN -->
+    <!-- Three.js и компоненты -->
     <script src="https://cloudflare.com"></script>
     <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://jsdelivr.net"></script>
+    <!-- Экспортер для сохранения -->
+    <script src="https://jsdelivr.net"></script>
+    <!-- GUI Меню настроек -->
     <script src="https://jsdelivr.net"></script>
 </head>
 <body>
     <div id="ui-container">
-        <h1>3D OBJ Просмотрщик</h1>
-        <label for="file-input" class="upload-btn">Выбрать .obj файл</label>
-        <input type="file" id="file-input" accept=".obj">
+        <h1>Advanced 3D Viewer</h1>
+        <div class="file-inputs">
+            <label class="upload-btn">
+                Выбрать файлы (.obj, .mtl, картинки)
+                <input type="file" id="file-input" accept=".obj,.mtl,.png,.jpg,.jpeg" multiple>
+            </label>
+        </div>
+        <div id="hint">Кликните по детали модели, чтобы двигать/вращать её.</div>
     </div>
     <div id="canvas-container"></div>
 
